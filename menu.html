@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KopiSenja | Menu</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-kopi">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">FOURPERSENT</a>
+
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Beranda</a>
+                <a class="nav-link aktif" href="menu.html">Menu</a>
+                <a class="nav-link" href="kontak.html">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Halaman Menu -->
+    <section class="bagian-menu">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <p class="teks-kecil">FOURPERSENT</p>
+                <h1>Menu Kami</h1>
+                <p>Pilih kategori dan temukan minuman favoritmu.</p>
+            </div>
+
+            <!-- PILIHAN KATEGORI -->
+            <div class="row g-3 justify-content-center mb-5">
+
+                <div class="col-md-4">
+                    <button type="button"
+                        class="tombol-kategori aktif-kategori"
+                        onclick="pilihKategori('coffee', this)">
+                        <span class="ikon-kategori">☕</span>
+                        <span>Coffee</span>
+                        <small>Signature Coffee</small>
+                    </button>
+                </div>
+
+                <div class="col-md-4">
+                    <button type="button"
+                        class="tombol-kategori"
+                        onclick="pilihKategori('noncoffee', this)">
+                        <span class="ikon-kategori">🥛</span>
+                        <span>Non Coffee</span>
+                        <small>Non Coffee Series</small>
+                    </button>
+                </div>
+
+                <div class="col-md-4">
+                    <button type="button"
+                        class="tombol-kategori"
+                        onclick="pilihKategori('black', this)">
+                        <span class="ikon-kategori">🫖</span>
+                        <span>Black Series</span>
+                        <small>Black Coffee Series</small>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- ===================== -->
+            <!-- KATEGORI COFFEE       -->
+            <!-- ===================== -->
+
+            <div class="isi-kategori" id="coffee">
+
+                <h2 class="kategori-menu">COFFEE</h2>
+                <p class="deskripsi-kategori">
+                    Nikmati racikan kopi khas FOURPERSENT.
+                </p>
+
+                <input type="text"
+                    id="cari-coffee"
+                    class="form-control kotak-pencarian mb-4"
+                    placeholder="Cari menu coffee..."
+                    oninput="cariMenu('coffee')">
+
+                <p id="pesan-coffee" style="display:none;">
+                    Menu tidak ditemukan.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- Aurea -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/aurea.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Aurea">
+                            <div class="card-body">
+                                <h5 class="card-title">Aurea Basic / Coconutmilk</h5>
+                                <p class="card-text">
+                                    Racikan kopi dengan pilihan susu basic
+                                    atau coconut milk.
+                                </p>
+                                <p class="harga">12K / 15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fero -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/Fero.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Fero">
+                            <div class="card-body">
+                                <h5 class="card-title">Fero Basic / Oatmilk</h5>
+                                <p class="card-text">
+                                    Perpaduan kopi dengan pilihan susu
+                                    basic atau oat milk.
+                                </p>
+                                <p class="harga">15K / 18K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gula Aren -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/aren.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Gula Aren">
+                            <div class="card-body">
+                                <h5 class="card-title">Gula Aren</h5>
+                                <p class="card-text">
+                                    Kopi susu dengan perpaduan manis
+                                    gula aren.
+                                </p>
+                                <p class="harga">15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ButterScotch -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/butter.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="ButterScotch">
+                            <div class="card-body">
+                                <h5 class="card-title">ButterScotch</h5>
+                                <p class="card-text">
+                                    Kopi dengan sentuhan rasa
+                                    butterscotch yang khas.
+                                </p>
+                                <p class="harga">18K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CheeseCake -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/chees.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="CheeseCake">
+                            <div class="card-body">
+                                <h5 class="card-title">CheeseCake</h5>
+                                <p class="card-text">
+                                    Racikan minuman kopi dengan
+                                    cita rasa cheesecake.
+                                </p>
+                                <p class="harga">20K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ===================== -->
+            <!-- KATEGORI NON COFFEE   -->
+            <!-- ===================== -->
+
+            <div class="isi-kategori" id="noncoffee"
+                style="display:none;">
+
+                <h2 class="kategori-menu">NON COFFEE</h2>
+                <p class="deskripsi-kategori">
+                    Pilihan minuman tanpa kopi dari FOURPERSENT.
+                </p>
+
+                <input type="text"
+                    id="cari-noncoffee"
+                    class="form-control kotak-pencarian mb-4"
+                    placeholder="Cari menu non coffee..."
+                    oninput="cariMenu('noncoffee')">
+
+                <p id="pesan-noncoffee" style="display:none;">
+                    Menu tidak ditemukan.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- SignatureMilk -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/milk.PNG"
+                                class="card-img-top gambar-menu"
+                                alt="SignatureMilk">
+                            <div class="card-body">
+                                <h5 class="card-title">SignatureMilk</h5>
+                                <p class="card-text">
+                                    Minuman susu dengan racikan
+                                    khas FOURPERSENT.
+                                </p>
+                                <p class="harga">12K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CandyMilk -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/candy.PNG"
+                                class="card-img-top gambar-menu"
+                                alt="CandyMilk">
+                            <div class="card-body">
+                                <h5 class="card-title">CandyMilk</h5>
+                                <p class="card-text">
+                                    Minuman susu dengan perpaduan
+                                    rasa manis.
+                                </p>
+                                <p class="harga">15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Roasted MilkTea -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/tea.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Roasted MilkTea">
+                            <div class="card-body">
+                                <h5 class="card-title">Roasted MilkTea</h5>
+                                <p class="card-text">
+                                    Perpaduan teh roasted
+                                    dengan susu.
+                                </p>
+                                <p class="harga">15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Matcha -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/macha.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Matcha">
+                            <div class="card-body">
+                                <h5 class="card-title">Matcha</h5>
+                                <p class="card-text">
+                                    Minuman matcha dengan
+                                    rasa khas teh hijau.
+                                </p>
+                                <p class="harga">20K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strawberry Matcha -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/Strawberry.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Strawberry Matcha">
+                            <div class="card-body">
+                                <h5 class="card-title">Strawberry Matcha</h5>
+                                <p class="card-text">
+                                    Perpaduan matcha dengan
+                                    rasa strawberry.
+                                </p>
+                                <p class="harga">25K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ===================== -->
+            <!-- KATEGORI BLACK SERIES -->
+            <!-- ===================== -->
+
+            <div class="isi-kategori" id="black"
+                style="display:none;">
+
+                <h2 class="kategori-menu">BLACK SERIES</h2>
+                <p class="deskripsi-kategori">
+                    Pilihan kopi hitam dengan karakter rasa khas.
+                </p>
+
+                <input type="text"
+                    id="cari-black"
+                    class="form-control kotak-pencarian mb-4"
+                    placeholder="Cari menu black series..."
+                    oninput="cariMenu('black')">
+
+                <p id="pesan-black" style="display:none;">
+                    Menu tidak ditemukan.
+                </p>
+
+                <div class="row g-4">
+
+                    <!-- ColdBrew -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/cold.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="ColdBrew">
+                            <div class="card-body">
+                                <h5 class="card-title">ColdBrew</h5>
+                                <p class="card-text">
+                                    Kopi yang diseduh dengan
+                                    metode cold brew.
+                                </p>
+                                <p class="harga">15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Americano -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/amer.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Americano">
+                            <div class="card-body">
+                                <h5 class="card-title">Americano</h5>
+                                <p class="card-text">
+                                    Kopi hitam dengan rasa
+                                    yang khas.
+                                </p>
+                                <p class="harga">10K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Markisa -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/Markisa.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Markisa">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Markisa - CB / Espresso
+                                </h5>
+                                <p class="card-text">
+                                    Pilihan rasa markisa dengan
+                                    cold brew atau espresso.
+                                </p>
+                                <p class="harga">18K / 15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lemon -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/lemon.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Lemon">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Lemon - CB / Espresso
+                                </h5>
+                                <p class="card-text">
+                                    Perpaduan lemon dengan
+                                    cold brew atau espresso.
+                                </p>
+                                <p class="harga">18K / 15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Berman -->
+                    <div class="col-md-4 kartu-menu">
+                        <div class="card h-100">
+                            <img src="img/berman.jpeg"
+                                class="card-img-top gambar-menu"
+                                alt="Berman">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Berman - CB / Espresso
+                                </h5>
+                                <p class="card-text">
+                                    Pilihan racikan Berman dengan
+                                    cold brew atau espresso.
+                                </p>
+                                <p class="harga">18K / 15K</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>© 2026 FOURPERSENT | Dimasz Aidul Halliya.</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Fungsi memilih kategori
+        function pilihKategori(id, tombol) {
+
+            var kategori = document.getElementsByClassName("isi-kategori");
+
+            for (var i = 0; i < kategori.length; i++) {
+                kategori[i].style.display = "none";
+            }
+
+            document.getElementById(id).style.display = "block";
+
+            var tombolKategori =
+                document.getElementsByClassName("tombol-kategori");
+
+            for (var j = 0; j < tombolKategori.length; j++) {
+                tombolKategori[j].classList.remove("aktif-kategori");
+            }
+
+            tombol.classList.add("aktif-kategori");
+        }
+
+
+        // Fungsi pencarian menu
+        function cariMenu(id) {
+
+            var input = document.getElementById("cari-" + id);
+            var kata = input.value.toLowerCase().trim();
+
+            var bagian = document.getElementById(id);
+            var menu = bagian.getElementsByClassName("kartu-menu");
+
+            var jumlah = 0;
+
+            for (var i = 0; i < menu.length; i++) {
+
+                var nama = menu[i]
+                    .getElementsByTagName("h5")[0]
+                    .innerText.toLowerCase();
+
+                if (nama.includes(kata)) {
+                    menu[i].style.display = "";
+                    jumlah++;
+                } else {
+                    menu[i].style.display = "none";
+                }
+            }
+
+            document.getElementById("pesan-" + id).style.display =
+                jumlah === 0 ? "block" : "none";
+        }
+
+    </script>
+
+</body>
+</html>

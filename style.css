@@ -1,0 +1,340 @@
+/* Pengaturan dasar */
+body {
+    background-color:#f1e9de;
+    color: #3e2b23;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Navigasi atau menu*/
+.navbar-kopi {
+    background-color: #650f08;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: 12px;
+    color: white;
+}
+
+.nav-link:hover,
+.nav-link.aktif {
+    color: #e8c9b5;
+    text-decoration: underline;
+}
+
+/* Halaman beranda */
+.hero {
+    padding: 70px 0;
+}
+
+.teks-kecil {
+    color: #966b45;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.deskripsi {
+    color: #76675d;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.gambar-utama {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Tombol */
+.tombol-kopi {
+    background-color: #650f08;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+}
+
+.tombol-kopi:hover {
+    background-color: #560c07;
+    color: white;
+}
+
+/* Bagian tentang */
+.tentang {
+    background-color: #eee2d1;
+    padding: 55px 15px;
+}
+
+.tentang h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.teks-tentang {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+}
+
+/* Halaman menu */
+.bagian-menu {
+    padding: 55px 0;
+}
+
+.bagian-menu h1,
+.bagian-kontak h1 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.kotak-pencarian {
+    padding: 13px;
+    border: 1px solid #cbb8a5;
+    border-radius: 8px;
+}
+
+.kotak-pencarian:focus {
+    border-color: #6b4532;
+    box-shadow: 0 0 5px #cbb8a5;
+}
+
+.card {
+    background-color: #fffdf9;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(62, 43, 35, 0.08);
+}
+
+.gambar-menu {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #4b3026;
+}
+
+.card-text {
+    color: #76675d;
+}
+
+.harga {
+    color: #8b5e3c;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Halaman kontak */
+.bagian-kontak {
+    padding: 65px 0;
+    min-height: 75vh;
+}
+
+.kotak-kontak {
+    background-color: #fffdf9;
+    padding: 30px 20px;
+    border-radius: 12px;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(62, 43, 35, 0.08);
+}
+
+.kotak-kontak h4 {
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #650f08;
+    color: white;
+    padding: 20px 10px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .gambar-utama {
+        height: 280px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+}
+
+
+.instagram-icon {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Tombol pilihan kategori */
+.tombol-kategori {
+    width: 100%;
+    min-height: 150px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: #fffdf9;
+    color: #4b3026;
+    border: 2px solid #e0d0bd;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tombol-kategori:hover {
+    background-color: #eee2d1;
+    border-color: #6b4532;
+    transform: translateY(-3px);
+}
+
+.tombol-kategori.aktif-kategori {
+    background-color: #6b4532;
+    color: white;
+    border-color: #6b4532;
+}
+
+.ikon-kategori {
+    font-size: 32px;
+}
+
+.tombol-kategori small {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.kategori-menu {
+    color: #4b3026;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #cbb8a5;
+}
+
+.deskripsi-kategori {
+    color: #76675d;
+    margin-bottom: 25px;
+}
+
+.isi-kategori {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.pesan-menu {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #76675d;
+}
+
+@media (max-width: 768px) {
+    .tombol-kategori {
+        min-height: 120px;
+        font-size: 18px;
+    }
+
+    .kategori-menu {
+        font-size: 24px;
+    }
+}
+
+
+/* Mengatur ukuran foto menu Coffee */
+#coffee .gambar-menu {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Menyamakan tinggi kartu menu Coffee */
+#coffee .card {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* Mengatur ukuran foto Non Coffee */
+#noncoffee .gambar-menu {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Mengatur tampilan kartu Non Coffee */
+#noncoffee .card {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Mengatur jarak isi kartu */
+#noncoffee .card-body {
+    padding: 18px;
+}
+
+
+/* Mengatur ukuran foto Black Series */
+#black .gambar-menu {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Mengatur kartu Black Series */
+#black .card {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Mengatur isi kartu */
+#black .card-body {
+    padding: 18px;
+}
+
+
